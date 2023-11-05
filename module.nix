@@ -106,7 +106,7 @@ in {
   
   in mkIf cfg.enable {
 
-    networking.firewall.allowedUDPPorts = mkif cfg.openFirewall [ 34197 ];
+    networking.firewall.allowedUDPPorts = mkIf cfg.openFirewall [ 34197 ];
 
     my.home.packages = let
       factorio-cmd = pkgs.writeShellScriptBin "factorio-cmd" ''
